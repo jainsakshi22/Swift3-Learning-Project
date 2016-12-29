@@ -20,7 +20,11 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
         self.navigationItem.title = "Blog Authors"
+        let serviceObj: AuthorListWebService = AuthorListWebService()
+        serviceObj.getRequest(parameters: ["nans" : "an"])
+        
         //When you register cell, no need to loadTableViewCellFromNib()
         //self.tableView.register(BlogTableCell.self, forCellReuseIdentifier: BLOG_TABLE_CELL_IDENTIFIER)
       
@@ -29,10 +33,12 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     
     //MARK: Table View Data source and delegate method
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return blogsArray.count
     }
     
@@ -45,7 +51,7 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         let blogDict = blogsArray[indexPath.row];
-        blogCell?.loadCellWithBlogData(blogData: blogDict)
+        blogCell?.loadCellWithBlogData(blogDict)
         
         return blogCell!
     
@@ -62,7 +68,7 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     
     //MARK:  Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var blogListCollectionVC: BlogListCollectionController = segue.destination as! BlogListCollectionController;
+        
         blogData = sender as! Dictionary<String, String>;
     }
     

@@ -16,7 +16,7 @@ class BlogTableCell: SJBaseTableCell {
     @IBOutlet weak var blogUrl: UILabel!
     
     
-    func loadCellWithBlogData(blogData: Dictionary <String, String>) {
+    func loadCellWithBlogData(_ blogData: Dictionary <String, String>) {
         blogName?.text = blogData["name"]
         blogUrl?.text = blogData["url"]
         

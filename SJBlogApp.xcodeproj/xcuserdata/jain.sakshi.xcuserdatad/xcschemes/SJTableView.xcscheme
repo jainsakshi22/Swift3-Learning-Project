@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F83DB12A1DE717D200214118"
-               BuildableName = "SJTableView.app"
-               BlueprintName = "SJTableView"
-               ReferencedContainer = "container:SJTableView.xcodeproj">
+               BuildableName = "ghhfhfj.app"
+               BlueprintName = "ghhfhfj"
+               ReferencedContainer = "container:ghhfhfj.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F83DB13E1DE717D200214118"
-               BuildableName = "SJTableViewTests.xctest"
-               BlueprintName = "SJTableViewTests"
-               ReferencedContainer = "container:SJTableView.xcodeproj">
+               BuildableName = "ghhfhfjTests.xctest"
+               BlueprintName = "ghhfhfjTests"
+               ReferencedContainer = "container:ghhfhfj.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F83DB12A1DE717D200214118"
-            BuildableName = "SJTableView.app"
-            BlueprintName = "SJTableView"
-            ReferencedContainer = "container:SJTableView.xcodeproj">
+            BuildableName = "ghhfhfj.app"
+            BlueprintName = "ghhfhfj"
+            ReferencedContainer = "container:ghhfhfj.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F83DB12A1DE717D200214118"
-            BuildableName = "SJTableView.app"
-            BlueprintName = "SJTableView"
-            ReferencedContainer = "container:SJTableView.xcodeproj">
+            BuildableName = "ghhfhfj.app"
+            BlueprintName = "ghhfhfj"
+            ReferencedContainer = "container:ghhfhfj.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F83DB12A1DE717D200214118"
-            BuildableName = "SJTableView.app"
-            BlueprintName = "SJTableView"
-            ReferencedContainer = "container:SJTableView.xcodeproj">
+            BuildableName = "ghhfhfj.app"
+            BlueprintName = "ghhfhfj"
+            ReferencedContainer = "container:ghhfhfj.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
