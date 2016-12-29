@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB1C73A042D6607E5B66BD8 /* Pods_SJTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5541CAA96AACE447F59B58 /* Pods_SJTableView.framework */; };
+		F82E10371E14CEA000AD2191 /* BlogAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10361E14CEA000AD2191 /* BlogAuthorViewController.swift */; };
+		F82E10391E14CEEF00AD2191 /* BlogListCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10381E14CEEF00AD2191 /* BlogListCollectionController.swift */; };
+		F82E103D1E14D11F00AD2191 /* NibConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E103C1E14D11F00AD2191 /* NibConstant.swift */; };
 		F83DB12F1DE717D200214118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83DB12E1DE717D200214118 /* AppDelegate.swift */; };
-		F83DB1311DE717D200214118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83DB1301DE717D200214118 /* ViewController.swift */; };
 		F83DB1341DE717D200214118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83DB1321DE717D200214118 /* Main.storyboard */; };
 		F83DB1361DE717D200214118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83DB1351DE717D200214118 /* Assets.xcassets */; };
 		F83DB1391DE717D200214118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83DB1371DE717D200214118 /* LaunchScreen.storyboard */; };
@@ -30,9 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2646BC9B3BB52A4F7A7D26CA /* Pods-SJTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJTableView/Pods-SJTableView.release.xcconfig"; sourceTree = "<group>"; };
+		3C5541CAA96AACE447F59B58 /* Pods_SJTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1BC2FABC474667D4C0E4A5 /* Pods-SJTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJTableView/Pods-SJTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		F82E10361E14CEA000AD2191 /* BlogAuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogAuthorViewController.swift; sourceTree = "<group>"; };
+		F82E10381E14CEEF00AD2191 /* BlogListCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogListCollectionController.swift; sourceTree = "<group>"; };
+		F82E103C1E14D11F00AD2191 /* NibConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibConstant.swift; sourceTree = "<group>"; };
 		F83DB12B1DE717D200214118 /* SJTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83DB12E1DE717D200214118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F83DB1301DE717D200214118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F83DB1331DE717D200214118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F83DB1351DE717D200214118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F83DB1381DE717D200214118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB1C73A042D6607E5B66BD8 /* Pods_SJTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +73,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4033CEEC251EFC753346BD7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A1BC2FABC474667D4C0E4A5 /* Pods-SJTableView.debug.xcconfig */,
+				2646BC9B3BB52A4F7A7D26CA /* Pods-SJTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F82E10351E14CEA000AD2191 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F82E10361E14CEA000AD2191 /* BlogAuthorViewController.swift */,
+				F82E10381E14CEEF00AD2191 /* BlogListCollectionController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F82E103A1E14D03F00AD2191 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F82E103C1E14D11F00AD2191 /* NibConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		F83DB1221DE717D200214118 = {
 			isa = PBXGroup;
 			children = (
 				F83DB12D1DE717D200214118 /* SJTableView */,
 				F83DB1421DE717D200214118 /* SJTableViewTests */,
 				F83DB12C1DE717D200214118 /* Products */,
+				4033CEEC251EFC753346BD7C /* Pods */,
+				FB04B10E59A975F6E2A4EF35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +122,10 @@
 		F83DB12D1DE717D200214118 /* SJTableView */ = {
 			isa = PBXGroup;
 			children = (
+				F82E103A1E14D03F00AD2191 /* Constants */,
+				F82E10351E14CEA000AD2191 /* ViewController */,
 				F855B51D1E0955B100F002DE /* Custom Table Cell */,
 				F83DB12E1DE717D200214118 /* AppDelegate.swift */,
-				F83DB1301DE717D200214118 /* ViewController.swift */,
 				F83DB1321DE717D200214118 /* Main.storyboard */,
 				F83DB1351DE717D200214118 /* Assets.xcassets */,
 				F83DB1371DE717D200214118 /* LaunchScreen.storyboard */,
@@ -116,6 +154,14 @@
 			path = "Custom Table Cell";
 			sourceTree = "<group>";
 		};
+		FB04B10E59A975F6E2A4EF35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C5541CAA96AACE447F59B58 /* Pods_SJTableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F83DB1481DE717D200214118 /* Build configuration list for PBXNativeTarget "SJTableView" */;
 			buildPhases = (
+				88AB9B2C1FC0CD73A538CB9F /* [CP] Check Pods Manifest.lock */,
 				F83DB1271DE717D200214118 /* Sources */,
 				F83DB1281DE717D200214118 /* Frameworks */,
 				F83DB1291DE717D200214118 /* Resources */,
+				06AC3F7E586F71AE8B374DBE /* [CP] Embed Pods Frameworks */,
+				EA98DF7804524CC45726F444 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,14 +265,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06AC3F7E586F71AE8B374DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SJTableView/Pods-SJTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88AB9B2C1FC0CD73A538CB9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA98DF7804524CC45726F444 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SJTableView/Pods-SJTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F83DB1271DE717D200214118 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82E10391E14CEEF00AD2191 /* BlogListCollectionController.swift in Sources */,
+				F82E103D1E14D11F00AD2191 /* NibConstant.swift in Sources */,
 				F855B51F1E0955B100F002DE /* SJBaseTableCell.swift in Sources */,
-				F83DB1311DE717D200214118 /* ViewController.swift in Sources */,
 				F855B5211E09591100F002DE /* BlogTableCell.swift in Sources */,
+				F82E10371E14CEA000AD2191 /* BlogAuthorViewController.swift in Sources */,
 				F83DB12F1DE717D200214118 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +458,7 @@
 		};
 		F83DB1491DE717D200214118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A1BC2FABC474667D4C0E4A5 /* Pods-SJTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SJTableView/Info.plist;
@@ -371,6 +471,7 @@
 		};
 		F83DB14A1DE717D200214118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2646BC9B3BB52A4F7A7D26CA /* Pods-SJTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SJTableView/Info.plist;

@@ -8,38 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
     let blogsArray = [
                       ["name": "Ray Wenderlich", "url": "https://www.raywenderlich.com"],
                       ["name":"NSHipster","url":"http://nshipster.com/"],
                       ["name":"Jameson Quav","url":"http://jamesonquave.com/"]
                     ]
-    let blogCellIdentifier = "BlogTableCellIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.title = "Blog List"
+        self.navigationItem.title = "Blog Authors"
         //When you register cell, no need to loadTableViewCellFromNib()
-        //self.tableView.register(BlogTableCell.self, forCellReuseIdentifier: blogCellIdentifier)
+        //self.tableView.register(BlogTableCell.self, forCellReuseIdentifier: BLOG_TABLE_CELL_IDENTIFIER)
       
       
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
     }
     
+    //MARK: Table View Data source and delegate method
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return blogsArray.count
@@ -47,10 +38,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var blogCell = tableView.dequeueReusableCell(withIdentifier: blogCellIdentifier) as? BlogTableCell;
+        var blogCell = tableView.dequeueReusableCell(withIdentifier: BLOG_TABLE_CELL_IDENTIFIER) as? BlogTableCell
         
         if (blogCell == nil) {
-            blogCell = (BlogTableCell.loadTableViewCellFromNib() as! BlogTableCell);
+            blogCell = (BlogTableCell.loadTableViewCellFromNib() as! BlogTableCell)
         }
         
         let blogDict = blogsArray[indexPath.row];
@@ -59,5 +50,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return blogCell!
     
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Redirect to blog detail page
+        self.performSegue(withIdentifier: DISPLAY_BLOG_AUTHOR_TO_BLOG_COLLECTION_SCREEN, sender: blogsArray[indexPath.row])
+    }
+    
+    //MARK:  Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var blogListCollectionVC: BlogListCollectionController = segue.destination as! BlogListCollectionController;
+        blogData = sender as! Dictionary<String, String>;
+    }
+    
 }
 
