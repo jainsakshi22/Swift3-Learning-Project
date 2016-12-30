@@ -23,8 +23,14 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
        
         self.navigationItem.title = "Blog Authors"
         let serviceObj: AuthorListWebService = AuthorListWebService()
-        serviceObj.getRequest(parameters: ["nans" : "an"])
         
+        serviceObj.executeGetRequest(completion:{
+            (response: Any?, error : Error?) in
+            
+            print(response ?? "maincontroller")
+        })
+        
+
         //When you register cell, no need to loadTableViewCellFromNib()
         //self.tableView.register(BlogTableCell.self, forCellReuseIdentifier: BLOG_TABLE_CELL_IDENTIFIER)
       

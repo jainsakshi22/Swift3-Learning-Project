@@ -26,7 +26,7 @@ class BaseWebService {
         return self.baseURL() + "/" + self.relativeURL()
     }
 
-    func getRequest(parameters:Dictionary <String, Any>) {
+    func executeGetRequest(completion:@escaping (_ result: Any?, _ error:Error?) -> Void) {
         
         let url = self.completeURL()
         Alamofire.request(url).responseJSON { (response:DataResponse<Any>) in
@@ -34,12 +34,13 @@ class BaseWebService {
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
-                    print(response.result.value ?? "API success but no response")
+                   // print(response.result.value ?? "performAction")
+                    completion(self.performActionOnResponse(response.result.value),nil)
                 }
                 break
                 
             case .failure(_):
-                print(response.result.error ?? "API failed")
+                completion(nil,response.result.error)
                 break
                 
             }
@@ -47,6 +48,8 @@ class BaseWebService {
     }
     
     func performActionOnResponse(_ responseObject: Any?) -> Any {
-        return responseObject ?? ""
+        
+        return responseObject ?? "";
     }
+    
 }

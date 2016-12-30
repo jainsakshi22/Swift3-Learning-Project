@@ -14,10 +14,6 @@ class AuthorListWebService: BaseWebService {
         return CONTACT_LIST_URL
     }
     
-    override func performActionOnResponse(_ responseObject: Any?) -> Any {
-        
-        return ""
-        
-    }
+ 
 
 }
