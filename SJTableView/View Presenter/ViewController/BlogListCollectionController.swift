@@ -9,7 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
-var blogData: Dictionary<String, String> = [:]
+var blogData: AuthorModel? = nil;
 
 class BlogListCollectionController: UICollectionViewController {
     
@@ -21,7 +21,7 @@ class BlogListCollectionController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        NSLog("BlogData:  %@", blogData)
+        NSLog("BlogData:  %@", blogData ?? "")
 
         // Do any additional setup after loading the view.
     }

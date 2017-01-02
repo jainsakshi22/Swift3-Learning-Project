@@ -65,7 +65,7 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     //MARK:  Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        blogData = sender as! Dictionary<String, String>;
+        blogData = sender as? AuthorModel;
     }
     
     // MARK: Web Service
