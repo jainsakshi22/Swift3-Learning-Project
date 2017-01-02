@@ -10,13 +10,14 @@
 		B9821560F98557AAC6881318 /* Pods_SJTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD6D7C91FD434AAA640A4DC /* Pods_SJTableView.framework */; };
 		F82E10511E1512CD00AD2191 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10451E1512CD00AD2191 /* BaseWebService.swift */; };
 		F82E10521E1512CD00AD2191 /* NibConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10491E1512CD00AD2191 /* NibConstant.swift */; };
-		F82E10531E1512CD00AD2191 /* BlogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E104B1E1512CD00AD2191 /* BlogTableCell.swift */; };
-		F82E10541E1512CD00AD2191 /* BlogTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82E104C1E1512CD00AD2191 /* BlogTableCell.xib */; };
+		F82E10531E1512CD00AD2191 /* AuthorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E104B1E1512CD00AD2191 /* AuthorTableCell.swift */; };
+		F82E10541E1512CD00AD2191 /* AuthorTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82E104C1E1512CD00AD2191 /* AuthorTableCell.xib */; };
 		F82E10551E1512CD00AD2191 /* SJBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E104D1E1512CD00AD2191 /* SJBaseTableCell.swift */; };
 		F82E10561E1512CD00AD2191 /* BlogAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E104F1E1512CD00AD2191 /* BlogAuthorViewController.swift */; };
 		F82E10571E1512CD00AD2191 /* BlogListCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10501E1512CD00AD2191 /* BlogListCollectionController.swift */; };
 		F82E10591E1512F100AD2191 /* WebServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10581E1512F100AD2191 /* WebServiceConstants.swift */; };
 		F82E10601E151D1000AD2191 /* AuthorListWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E105F1E151D1000AD2191 /* AuthorListWebService.swift */; };
+		F82E10631E1A57F500AD2191 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E10621E1A57F500AD2191 /* AuthorModel.swift */; };
 		F83DB12F1DE717D200214118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83DB12E1DE717D200214118 /* AppDelegate.swift */; };
 		F83DB1341DE717D200214118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83DB1321DE717D200214118 /* Main.storyboard */; };
 		F83DB1361DE717D200214118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83DB1351DE717D200214118 /* Assets.xcassets */; };
@@ -41,14 +42,15 @@
 		AD3C75B2881AF9D7574DDA87 /* Pods-SJTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJTableView/Pods-SJTableView.release.xcconfig"; sourceTree = "<group>"; };
 		F82E10451E1512CD00AD2191 /* BaseWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		F82E10491E1512CD00AD2191 /* NibConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibConstant.swift; sourceTree = "<group>"; };
-		F82E104B1E1512CD00AD2191 /* BlogTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableCell.swift; sourceTree = "<group>"; };
-		F82E104C1E1512CD00AD2191 /* BlogTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableCell.xib; sourceTree = "<group>"; };
+		F82E104B1E1512CD00AD2191 /* AuthorTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTableCell.swift; sourceTree = "<group>"; };
+		F82E104C1E1512CD00AD2191 /* AuthorTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorTableCell.xib; sourceTree = "<group>"; };
 		F82E104D1E1512CD00AD2191 /* SJBaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJBaseTableCell.swift; sourceTree = "<group>"; };
 		F82E104F1E1512CD00AD2191 /* BlogAuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogAuthorViewController.swift; sourceTree = "<group>"; };
 		F82E10501E1512CD00AD2191 /* BlogListCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogListCollectionController.swift; sourceTree = "<group>"; };
 		F82E10581E1512F100AD2191 /* WebServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceConstants.swift; sourceTree = "<group>"; };
 		F82E105A1E1518C600AD2191 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/SJTableView-gcepwhvowcuphqgqftkwmyuwsizv/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		F82E105F1E151D1000AD2191 /* AuthorListWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorListWebService.swift; sourceTree = "<group>"; };
+		F82E10621E1A57F500AD2191 /* AuthorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
 		F83DB12B1DE717D200214118 /* BlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83DB12E1DE717D200214118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83DB1331DE717D200214118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,8 +130,8 @@
 		F82E104A1E1512CD00AD2191 /* Custom Table Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F82E104B1E1512CD00AD2191 /* BlogTableCell.swift */,
-				F82E104C1E1512CD00AD2191 /* BlogTableCell.xib */,
+				F82E104B1E1512CD00AD2191 /* AuthorTableCell.swift */,
+				F82E104C1E1512CD00AD2191 /* AuthorTableCell.xib */,
 				F82E104D1E1512CD00AD2191 /* SJBaseTableCell.swift */,
 			);
 			path = "Custom Table Cell";
@@ -142,6 +144,14 @@
 				F82E10501E1512CD00AD2191 /* BlogListCollectionController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F82E10611E1A510F00AD2191 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F82E10621E1A57F500AD2191 /* AuthorModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F83DB1221DE717D200214118 = {
@@ -167,6 +177,7 @@
 		F83DB12D1DE717D200214118 /* SJBlogApp */ = {
 			isa = PBXGroup;
 			children = (
+				F82E10611E1A510F00AD2191 /* Model */,
 				F82E10441E1512CD00AD2191 /* Networking */,
 				F82E10471E1512CD00AD2191 /* View Presenter */,
 				F83DB12E1DE717D200214118 /* AppDelegate.swift */,
@@ -286,7 +297,7 @@
 			files = (
 				F83DB1391DE717D200214118 /* LaunchScreen.storyboard in Resources */,
 				F83DB1361DE717D200214118 /* Assets.xcassets in Resources */,
-				F82E10541E1512CD00AD2191 /* BlogTableCell.xib in Resources */,
+				F82E10541E1512CD00AD2191 /* AuthorTableCell.xib in Resources */,
 				F8B8050E1E13D5FA002F490F /* Image.xcassets in Resources */,
 				F83DB1341DE717D200214118 /* Main.storyboard in Resources */,
 			);
@@ -359,7 +370,8 @@
 				F82E10521E1512CD00AD2191 /* NibConstant.swift in Sources */,
 				F82E10551E1512CD00AD2191 /* SJBaseTableCell.swift in Sources */,
 				F82E10601E151D1000AD2191 /* AuthorListWebService.swift in Sources */,
-				F82E10531E1512CD00AD2191 /* BlogTableCell.swift in Sources */,
+				F82E10531E1512CD00AD2191 /* AuthorTableCell.swift in Sources */,
+				F82E10631E1A57F500AD2191 /* AuthorModel.swift in Sources */,
 				F82E10571E1512CD00AD2191 /* BlogListCollectionController.swift in Sources */,
 				F82E10511E1512CD00AD2191 /* BaseWebService.swift in Sources */,
 				F82E10561E1512CD00AD2191 /* BlogAuthorViewController.swift in Sources */,

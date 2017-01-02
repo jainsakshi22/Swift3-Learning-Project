@@ -12,4 +12,4 @@ import Foundation
 let DISPLAY_BLOG_AUTHOR_TO_BLOG_COLLECTION_SCREEN    = "displayBlogAuthorToBlogListCollectionVC"
 
 //MARK: Cell Identifier
-let BLOG_TABLE_CELL_IDENTIFIER                     = "blogCellIdentifier"
+let AUTHOR_TABLE_CELL_IDENTIFIER                     = "AuthorTableCellIdentifier"

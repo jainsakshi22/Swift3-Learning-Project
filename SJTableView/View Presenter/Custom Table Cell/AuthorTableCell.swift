@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlogTableCell: SJBaseTableCell {
+class AuthorTableCell: SJBaseTableCell {
 
 
     @IBOutlet weak var blogImageView: UIImageView!
@@ -16,9 +16,9 @@ class BlogTableCell: SJBaseTableCell {
     @IBOutlet weak var blogUrl: UILabel!
     
     
-    func loadCellWithBlogData(_ blogData: Dictionary <String, String>) {
-        blogName?.text = blogData["name"]
-        blogUrl?.text = blogData["url"]
+    func loadCellWithAuthorData(_ authorData: AuthorModel) {
+        blogName?.text = authorData.fullName
+        blogUrl?.text = authorData.url
         
     }
 }

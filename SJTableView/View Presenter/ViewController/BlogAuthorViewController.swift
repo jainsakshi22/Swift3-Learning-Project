@@ -11,29 +11,19 @@ import UIKit
 class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    let blogsArray = [
-                      ["name": "Ray Wenderlich", "url": "https://www.raywenderlich.com"],
-                      ["name":"NSHipster","url":"http://nshipster.com/"],
-                      ["name":"Jameson Quav","url":"http://jamesonquave.com/"]
-                    ]
-
+    
+    var authorsArray = [AuthorModel] ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
         self.navigationItem.title = "Blog Authors"
-        let serviceObj: AuthorListWebService = AuthorListWebService()
         
-        serviceObj.executeGetRequest(completion:{
-            (response: Any?, error : Error?) in
-            
-            print(response ?? "maincontroller")
-        })
-        
-
         //When you register cell, no need to loadTableViewCellFromNib()
         //self.tableView.register(BlogTableCell.self, forCellReuseIdentifier: BLOG_TABLE_CELL_IDENTIFIER)
       
+        self.callBlogListWebService()
       
     }
     
@@ -45,37 +35,51 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return blogsArray.count
+        return authorsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var blogCell = tableView.dequeueReusableCell(withIdentifier: BLOG_TABLE_CELL_IDENTIFIER) as? BlogTableCell
+        var authorCell = tableView.dequeueReusableCell(withIdentifier: AUTHOR_TABLE_CELL_IDENTIFIER) as? AuthorTableCell
         
-        if (blogCell == nil) {
-            blogCell = (BlogTableCell.loadTableViewCellFromNib() as! BlogTableCell)
+        if (authorCell == nil) {
+            authorCell = (AuthorTableCell.loadTableViewCellFromNib() as! AuthorTableCell)
         }
         
-        let blogDict = blogsArray[indexPath.row];
-        blogCell?.loadCellWithBlogData(blogDict)
+        let authorData = authorsArray[indexPath.row];
+        authorCell?.loadCellWithAuthorData(authorData)
         
-        return blogCell!
+        return authorCell!
     
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Redirect to blog detail page
-        self.performSegue(withIdentifier: DISPLAY_BLOG_AUTHOR_TO_BLOG_COLLECTION_SCREEN, sender: blogsArray[indexPath.row])
+        self.performSegue(withIdentifier: DISPLAY_BLOG_AUTHOR_TO_BLOG_COLLECTION_SCREEN, sender: authorsArray[indexPath.row])
     }
     
     //MARK:  Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         blogData = sender as! Dictionary<String, String>;
+    }
+    
+    // MARK: Web Service
+    func callBlogListWebService() -> Void {
+        
+        let serviceObj: AuthorListWebService = AuthorListWebService()
+        serviceObj.executeGetRequest(completion:{
+            (response: Any?, error : Error?) in
+            
+            if (response != nil && error == nil) {
+                self.authorsArray = response as! [AuthorModel]
+                self.tableView.reloadData()
+            }
+        })
     }
     
 }

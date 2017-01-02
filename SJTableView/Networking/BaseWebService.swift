@@ -34,7 +34,7 @@ class BaseWebService {
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
-                   // print(response.result.value ?? "performAction")
+                   
                     completion(self.performActionOnResponse(response.result.value),nil)
                 }
                 break
