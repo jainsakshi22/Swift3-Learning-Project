@@ -30,7 +30,7 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: Table View Data source and delegate method
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return UILocalizedIndexedCollation.current().sectionIndexTitles.count;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +62,11 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
         self.performSegue(withIdentifier: DISPLAY_BLOG_AUTHOR_TO_BLOG_COLLECTION_SCREEN, sender: authorsArray[indexPath.row])
     }
     
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    
+       return UILocalizedIndexedCollation.current().sectionIndexTitles;
+    }
+    
     //MARK:  Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -77,6 +82,14 @@ class BlogAuthorViewController: UIViewController, UITableViewDataSource, UITable
             
             if (response != nil && error == nil) {
                 self.authorsArray = response as! [AuthorModel]
+                
+//                for model in self.authorsArray {
+//                    
+//                    for char in UILocalizedIndexedCollation.current().sectionIndexTitles {
+//                    
+//                       
+//                    }
+//                }
                 self.tableView.reloadData()
             }
         })

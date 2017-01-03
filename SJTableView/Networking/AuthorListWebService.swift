@@ -15,7 +15,7 @@ class AuthorListWebService: BaseWebService {
     }
     
     override func performActionOnResponse(_ responseObject: Any?) -> Any {
-       
+        
         var authorArray: Array = [AuthorModel] ()
         if (responseObject != nil) {
             
@@ -25,7 +25,11 @@ class AuthorListWebService: BaseWebService {
                 authorArray.append(model)
             }
         }
-        return authorArray 
+        
+        let descriptor: NSSortDescriptor = NSSortDescriptor(key: "firstName", ascending: true)
+        let sortedResults = NSArray(array: authorArray).sortedArray(using: [descriptor])
+
+        return sortedResults
     }
  
 
